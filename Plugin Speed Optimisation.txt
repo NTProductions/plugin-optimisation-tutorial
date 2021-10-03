@@ -1,0 +1,24 @@
+// plugin speed optimisation
+
+
+
+// math refactoring
+instead of 1 / 10
+use 1 * .03
+
+
+
+// combining iterate functions
+iterate(tintRChannel)
+iterate(tintGChannel)
+iterate(tintBChannel)
+
+to
+
+iterate(tintRGBChannel)
+
+given a 1080p image, this changes needing 1920x1080x3 (6,220,800) into 1920x1080 (2,073,600)
+
+
+
+// pre-calculate values during sequence setup to avoid doing it during each Render()/SmartRender() call
